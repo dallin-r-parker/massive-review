@@ -1,3 +1,4 @@
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const massive = require('massive');
@@ -21,7 +22,8 @@ const userCtrl = require('./controllers/userCtrl');
 
 
 
-app.get('/api/test', userCtrl.getAll);
+app.get('/api/all-users', userCtrl.getAll);
+app.post('/api/new-user', userCtrl.createUser);
 
 
 
