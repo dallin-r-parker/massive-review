@@ -10,7 +10,7 @@
 
     const { firstname, lastname, email, password } = req.body;
 
-    req.app.get('db').create([firstname, lastname, email, password]).then(response => {
+    req.db.create([firstname, lastname, email, password]).then(response => {
        res.status(200).send(response)
     })
   }
