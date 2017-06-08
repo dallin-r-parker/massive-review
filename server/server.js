@@ -6,10 +6,25 @@ const app = express();
 
 app.use(bodyParser.json());
 
-
-
-
-
-app.listen(port, ()=> {
-  console.log(`listen on port ${port}`);
+// ================== INITIALIZE MASSIVE DB
+massive({
+  host: 'localhost',
+  port: 5432,
+  database: 'user_test',
+}).then(db => {
+  app.set('db', db)
+  console.log('working')
 })
+
+//================= Controllers
+const userCtrl = require('./controllers/userCtrl');
+
+
+
+app.get('/api/test', userCtrl.getAll);
+
+
+
+
+
+app.listen(port, () => { console.log(`listen on port ${port}`) });
