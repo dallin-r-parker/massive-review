@@ -1,0 +1,21 @@
+{
+  "name": "massive-review",
+  "version": "1.0.0",
+  "description": "review on setting up massive with a node express app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "massivejs",
+    "expressjs"
+  ],
+  "author": "Dallin R Parker",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "massive": "^3.0.0-rc1"
+  }
+}
