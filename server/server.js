@@ -1,12 +1,15 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const massive = require('massive');
 const port = 4000;
 const app = express();
 
-app.use(bodyParser.json());
 
+app.use(bodyParser.json());
+app.use(express.static('../public'))
+app.use(cors());
 // ================== INITIALIZE MASSIVE DB
 massive({
   host: 'localhost',
@@ -14,18 +17,13 @@ massive({
   database: 'user_test',
 }).then(db => {
   app.set('db', db)
-  console.log('working')
 })
 
 //================= Controllers
 const userCtrl = require('./controllers/userCtrl');
 
-
-
 app.get('/api/all-users', userCtrl.getAll);
-app.post('/api/new-user', userCtrl.createUser);
-
-
+app.post('/api/new-user', userCtrl.create);
 
 
 

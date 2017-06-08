@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styling.css">
+    <title>Basic Login</title>
+  </head>
+  <body ng-controller='controller'>
+
+
+     <form class="register-account" ng-submit="createUser(newUser)">
+       <input type="text" placeholder="First Name" ng-model="newUser.firstname">
+       <input type="text" placeholder="Last Name" ng-model="newUser.lastname">
+       <input type="email" placeholder="jon_doe@example.com" ng-model="newUser.email">
+       <input type="password" placeholder="password" ng-model="newUser.passwod">
+       <button type="submit">Register</button>
+     </form>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="controller.js"></script>
+    <script src="service.js"></script>
+  </body>
+</html>
