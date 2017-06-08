@@ -3,3 +3,7 @@ exports.getAll = (req, res, next) => {
     res.status(200).send(response);
   })
 }
+
+exports.createUser = (req, res, next) => {
+  console.log(req.body);
+}
