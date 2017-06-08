@@ -1,0 +1,14 @@
+.register-account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 35%;
+  padding: 15px;
+  height: 100vh;
+}
+
+input {
+  border: 1px solid black;
+  padding: 10px;
+}
